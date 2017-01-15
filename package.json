@@ -7,6 +7,8 @@
   "author": "yboyer",
   "license": "AGPL-3.0",
   "dependencies": {
-    "express": "^4.14.0"
+    "express": "^4.14.0",
+    "nedb": "^1.8.0",
+    "socket.io": "^1.7.2"
   }
 }
