@@ -5,6 +5,13 @@ const io = require('socket.io')(server);
 const Datastore = new require('nedb');
 const db = new Datastore({ filename: './data.json', autoload: true });
 
+const argv = require('minimist')(process.argv.slice(2));
+if (argv.p === undefined) {
+  console.log(`Usage: node ${process.argv[1]} -p <PORT>`);
+  process.exit(-1);
+}
+const PORT = argv.p;
+
 /**
  * Add track event on db
  */
@@ -77,6 +84,6 @@ io.on('connection', (socket) => {
 /**
  * Listen
  */
-server.listen(4401, () => {
-  console.log('Listening...');
+server.listen(PORT, () => {
+  console.log(`Listening on :${PORT}...`);
 });
