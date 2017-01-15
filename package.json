@@ -1,0 +1,12 @@
+{
+  "name": "open-tracker",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "keywords": [],
+  "author": "yboyer",
+  "license": "AGPL-3.0",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}
